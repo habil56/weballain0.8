@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: 'MedievalSharp', cursive;
+  background: linear-gradient(to right, #1a1344, #3a2b75);
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+canvas#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to right, #1a1344, #3a2b75);
+  padding: 15px;
+  text-align: center;
+  font-size: 40px;
+  border-bottom: 4px solid #6a5acd;
+  text-shadow: 2px 2px 6px #000;
+}
+.header a {
+  color: #e6e6fa;
+  text-decoration: none;
+}
+.header a:hover {
+  text-shadow: 4px 2px 10px lightgoldenrodyellow;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Card */
+.card {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: 30px 40px;
+  width: 80%;
+  max-width: 900px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+/* Left */
+.left {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.left img {
+  width: 100%;         /* ยืดเต็มกล่อง */
+  max-width: 220px;    /* จำกัดไม่เกิน 220px */
+  height: auto;        /* รักษาสัดส่วน */
+  border-radius: 12px;
+  object-fit: cover;
+  margin-left: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(106, 92, 205, 0.8); /* เงาม่วง */
+}
+
+/* Right */
+.right {
+  margin-left: 50px;
+}
+.right h2 {
+  font-size: 26px;
+  margin: 0 0 10px 0;
+  color: #000;
+}
+.right h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #3a2b75;
+}
+
+/* Contact */
+.contact {
+  margin-bottom: 15px;
+}
+.contact a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #1a1344;
+  transition: color 0.3s ease;
+}
+.contact a:hover {
+  color: red;
+}
+.contact img {
+  width: 28px;
+  height: 28px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;   /* ซ้อนเป็นแนวตั้ง */
+    align-items: center;
+    text-align: center;
+  }
+
+  .left {
+    margin-bottom: 20px;
+  }
+
+  .left img {
+    max-width: 180px;  /* ย่อรูปลงสำหรับมือถือ */
+    margin-left: 0;
+  }
+
+  .right {
+    margin-left: 0;
+  }
+
+  .right h2 {
+    font-size: 22px;
+  }
+
+  .right h3 {
+    font-size: 18px;
+  }
+
+  .contact a {
+    font-size: 18px;
+  }
+}
+
+
+.gold-ring {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ringEffect 0.7s ease-out forwards;
+  z-index: 9998;
+}
+
+/* เอฟเฟกต์ wave */
+@keyframes waveEffect {
+  from {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+/* เอฟเฟกต์วงรอบ */
+@keyframes ringEffect {
+  from {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.8;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    font-family: 'MedievalSharp', cursive;
+    color: #ffffff;
+    background: linear-gradient(to right, #1a1344, #3a2b75);
+}
+
+/* ส่วนหัว */
+.header {
+    background: linear-gradient(to right, #1a1344, #3a2b75);
+    padding: 15px;
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 4px solid #6a5acd;
+    text-shadow: 2px 2px 6px #000;
+}
+.header a {
+    color: #e6e6fa;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+/* คำว่า พลังแฝงที่แนะนำ */
+.page-title {
+    text-align: center;
+    font-size: 36px;
+    color: #ffeb3b;
+    margin-top: 20px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+/* กล่องไอเทม */
+.item-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.item-box {
+    background: rgba(25, 20, 50, 0.85);
+    border: 3px solid #6a5acd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    box-shadow: 0 0 15px #5a4caa;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-box h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.item-img {
+    width: 80%; /* ขนาดใหญ่ขึ้น */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* หัวข้อแต่ละสกิล / section ใหม่ */
+.section-title {
+    background: linear-gradient(to right, #4b3c8a, #2a1e5e);
+    padding: 12px;
+    border: 3px solid #7a6ff5;
+    box-shadow: 0 0 15px #6a5acd;
+    margin: 20px 2% 5px 2%;
+    text-align: center;
+    color: #e3dfff;
+    text-shadow: 2px 2px 8px #000, 0 0 15px #6a5acd;
+    font-size: 28px;
+}
+
+/* กล่องเนื้อหา */
+.skill-box {
+    background: rgba(25, 20, 50, 0.85);
+    border: 3px solid #6a5acd;
+    box-shadow: 0 0 10px #5a4caa;
+    padding: 15px;
+    margin: 0 2% 20px 2%;
+    line-height: 1.6;
+    border-radius: 10px;
+}
+
+/* สีข้อความเน้น */
+.yellow { color: #ffff80; font-weight: bold; }
+
+/* Flexbox สำหรับ skill (เช่น spell) */
+.skill-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.speal {
+    text-align: center;
+    padding: 10px;
+    width: 220px;
+}
+
+/* ---------- ไอเทมเซ็ต ---------- */
+.set-box {
+    text-align: center;
+}
+
+.setitem {
+    display: block;
+    margin: 0 auto 15px auto; /* กึ่งกลาง */
+    width: 600px; /* ขนาดใหญ่ขึ้น */
+    height: auto;
+    border-radius: 10px;
+}
+
+.skill-item{
+    text-align: center;
+}
+.rooncri, .roontank {
+    text-align: center;
+}
+
+.rooncri img, .roontank img {
+    display: block;
+    margin: 0 auto 10px auto; /* ทำให้รูปอยู่กลาง */
+    width: 250px; /* ขนาดพอดี */
+    height: auto;
+}
+
+
+.header :hover {
+ 
+    text-shadow: 4px 2px 10px lightgoldenrodyellow;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .item-box {
+        width: 90%; /* ให้กล่องแคบลงเวลาเป็นมือถือ */
+    }
+
+    .item-img, .setitem {
+        max-width: 100%;
+    }
+}  
+
+.gold-ring {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ringEffect 0.7s ease-out forwards;
+  z-index: 9998;
+}
+
+/* เอฟเฟกต์ wave */
+@keyframes waveEffect {
+  from {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+/* เอฟเฟกต์วงรอบ */
+@keyframes ringEffect {
+  from {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.8;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+
+
+
+/* ไฮไลท์ */
+.red-highlight { color: #ff4c4c; font-weight: bold; }
+.green-highlight { color: #7cff4c; font-weight: bold; }
+.yellow-highlight { color: #ffff66; font-weight: bold; }
